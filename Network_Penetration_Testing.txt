@@ -1,0 +1,48 @@
+1. Perbedaan Vulnerability assessment dan penetration testing
+
+  a) Vulnerability Assessment adalah proses mengindentifikasi dan menganalisis vulnerabilites dalam web, app, network, maupun software. 
+  Setelah ditemukan adanya vulnerabilites, maka didokumentasikanlah list potensi/celah tersebut tanpa ada proses lanjutan seperti percobaan eksploitasi. 
+  Tidak menilai sejauh mana vulnerabilites dapat dieksploitasi makanya tidak memvalidasi juga apakah ada kemungkinan akses tidak sah, perolehan data sensitif, dsb.
+  b) Penetration Testing adalah proses yang mencakup proses dari vulnerability assesment tetapi lebih proaktif lagi,
+  Sebab pada proses penetration testing kita (penggiat cyber etis) dapat mengeksploitasi secara terus-menerus guna menguji 
+  sejauh mana web, app, network, maupun software rentan terhadap serangan, menguji sampai sejauh mana akses dapat diperoleh, 
+  dan menguji sejauh mana kerentanan dapat dieksploitasi. 
+
+  Oleh karena itu perbedaan Vulnerability Assesment dan Penetration Testing berada pada kedalaman pengujian dan hasil pengujian.
+
+2. Konsep CIA
+  a) CIA (Confidentiality, Integrity, and Availability) merupakan 3 aspek yang menjadi standar/pedoman/parameter untuk mengukur dan menentukan 
+  apakah sistem komputer dan jaringan aman atau tidak. Dengan penilaian berdasarkan 3 aspek ini, diharapkan aplikasi, web, software, atau 
+  jaringan sesuai dengan SOP dan regulasi.
+
+  - Confidentiality (kerahasiaan) merupakan aspek yang membatasi akses terhadap informasi/data sensitif, 
+  dimana implementasinya adalah individu/entitas yang secara sah dan telah mendapatkan izin saja yang bisa mengakses informasi tertentu. 
+  Tujuannya agar data/informasi sensitif itu tidak bocor ke pihak luar yang sewaktu-waktu bisa secara tidak bertanggung jawab menyalahgunakannya.
+  Cara mengatasi adalah enkripsi untuk menjamin bahwa hanya orang yang sah yang bisa mendekripsi (membaca) data/informasi data yang ada. 
+  Bisa juga kontrol akses yang ketat dari pihak IT Security dan pelatihan/edukasi pengguna supaya ga sembarang sebar credential.
+
+  - Integrity (integritas) adalah aspek yang mengutamakan ke-orisinalan dan integritas data. 
+  Jadi merujuk pada tingkat kepercayaan terhadap suatu data, kepercayaan dalam hal ini mencakup akurasi dan konsitensi. 
+  Maka segala bentuk mengubah, memanipulasi, atau merusak oleh pihak tidak bertanggung jawab adalah tidak boleh.
+  Cara mengtasi adalah pemeriksaan berkala ke log yang merekam siapa + kapan + apa perubahan yang terjadi pada data atau sistem. 
+  Sehingga perubaha yang tidak sah dapat diidentifikasi. Kemudian bisa juga menggunakan mekanisme hash untuk memastikan data tidak berubah 
+  atau dimanipulasi selama disimpan di tempat penyimpanan.
+
+  - Availability (ketersediaan) adalah aspek yang menekankan bahwa informasi atau sumber daya apabila sewaktu-waktu dibutuhkan oleh user maupun entitas lainnya 
+  yang berkepentingan, maka harus bisa diakses dan digunakan dengan cepat serta mudah (artinya data/informasi tersedia sepanjang waktu kecuali ada peristiwa 
+  tertentu kaya maintenance/serangan yang mengganggu ketersediaan).
+  Cara mengatasi adalah backup berkala untuk meminimalisir dampak yang ditimbulkan. 
+  Kemudian bisa juga ditambahkan server cadangan/skema proteksi yang menjamin data-data tersebut tetap tersedia meskipun sedang terjadi gangguan.
+
+  3. OWASP top 10 (mempermudah reasoning CIA)
+
+  1) Broken Access Control tidak membatasi akses ke sumber daya karena fungsionalitas seperti verifikasi credential dan izin pengguna lemah 
+  (ada baris code yang lemah) dan ketergantungan data pengguna (app/web/sistem ngandalin data dalam URL buat atur akses dan ini bisa dimanipulasi sedemikian rupa). 
+  Kesimpulan: prinsip hak akses rendah.
+
+  2) Cryptographic Failures situasi di mana sistem atau aplikasi gagal dalam penerapan dan penggunaan kriptografi  dengan benar untuk melindungi data 
+  dan komunikasi dari ancaman keamanan.
+
+  3) Injection tidak memvalidasi, menyaring, atau membersihkan input pengguna (sumber eksternal) dengan benar, 
+  memungkinkan penyerang menyuntikkan kode berbahaya ke dalam aplikasi.
+
