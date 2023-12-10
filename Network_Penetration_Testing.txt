@@ -46,3 +46,27 @@
   3) Injection tidak memvalidasi, menyaring, atau membersihkan input pengguna (sumber eksternal) dengan benar, 
   memungkinkan penyerang menyuntikkan kode berbahaya ke dalam aplikasi.
 
+  4) Insecure Design merupakan kegagalan dari proses perancangan konsep app/web/sistem terus keterusan sampai di proses develop setelah itu ga dikontrol dengan      baik juga (tidak ke notice). Jadi secara garis besar ini kerentanan yang gagalnya benar-benar dari awal sampai akhir dirilis, 
+  Kesimpulan: human error.
+
+  5) Security Misconfiguration adalah konfigurasi app/web/sistem bisa kelupaan diatur, diatur salah, atau terlalu default maka jadi celah buat diekploitasi.
+
+  6) Vulnerable and Outdated Components  Kerentanan ini terjadi ketika sebuah aplikasi menggunakan komponen yang sudah usang atau rentan, membuatnya rentan       
+  terhadap serangan. Salah satu penyebabnya juga bisa karena security misconfiguration, ada juga karena developer ga op jadi ga rutin maintenance dan monitoring   
+  produknya
+
+  7) Identification and Authentication Failures terjadi ketika aplikasiwe/sistem bergantung pada proses otentikasi yang lemah atau gagal memvalidasi informasi   
+  otentikasi dengan benar. tidak ada MFA (Multi-Factor Authentication), MFA itu seperti pass, kredensial/token, biometrik kaya sidik jari atau face recognition. 
+  MFA bisa atasin brute force + stuffing credential.
+
+  8) Software and Data Integrity Failures adalah Kerentanan ini terjadi ketika sebuah aplikasi tidak memverifikasi integritas pembaruan perangkat lunak atau data 
+  penting dengan benar, memungkinkan penyerang untuk memodifikasi perangkat lunak atau data.
+
+  9) Security Logging and Monitoring Failures Kerentanan ini terjadi ketika sebuah aplikasi tidak mencatat peristiwa keamanan atau memantau aktivitas yang 
+  mencurigakan, membuatnya sulit untuk mendeteksi dan menanggapi serangan.
+
+  10) Server-Side Request Forgery (SSRF)  Kerentanan ini terjadi ketika sebuah aplikasi memungkinkan penyerang mengirim permintaan dari server ke server lain di 
+  jaringan, yang berpotensi mengungkapkan data atau fungsionalitas sensitif
+
+
+
